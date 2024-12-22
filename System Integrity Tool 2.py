@@ -7,8 +7,11 @@ from threading import Thread
 from plyer import notification
 
 # Log files
-monitoring_log_file = "G:/My Drive/Jason Files/School/CYB 333 Security Automation/Log/MONITORING_LOG.txt"
-cleared_temp_files_log_file = "G:/My Drive/Jason Files/School/CYB 333 Security Automation/Log/CLEARED_TEMP_FILES_LOG.txt"
+downloads_folder = os.path.join(os.path.expanduser("~"), "Downloads")
+
+monitoring_log_file = os.path.join(downloads_folder, "MONITORING_LOG.txt")
+cleared_temp_files_log_file = os.path.join(downloads_folder, "CLEARED_TEMP_FILES_LOG.txt")
+
 os.makedirs(os.path.dirname(monitoring_log_file), exist_ok=True)
 os.makedirs(os.path.dirname(cleared_temp_files_log_file), exist_ok=True)
 
